@@ -15,3 +15,14 @@ function connect_to_db()
     exit("db error:" . $e->getMessage());
   }
 }
+
+// ログイン状態のチェック関数 →毎回id再生成
+function check_session_id()
+{
+  if (!isset($_SESSION['session_id']) || $_SESSION['session_id'] != session_id()) {
+    header('Location: index.php');
+  } else {
+    session_regenerate_id(true); // セッションidの再生成
+    $_SESSION['session_id'] = session_id(); // セッション変数に格納
+  }
+}

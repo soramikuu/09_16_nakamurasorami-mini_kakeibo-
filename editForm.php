@@ -1,9 +1,9 @@
 <?php
 // var_dump($_GET);
 // exit();
-
-// 関数ファイルの読み込み
+session_start();
 include('functions.php');
+check_session_id();
 
 // idの受け取り
 $id = $_GET['id'];
@@ -49,7 +49,7 @@ if ($status == false) {
   <div class="container">
     <header class="my-5">
       <nav>
-        <a href="index.php" style="text-decoration: none; color:black;">かけいぼ</a>
+        <a href="read.php" style="text-decoration: none; color:black;">かけいぼ</a>
       </nav>
     </header>
 

@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST);
+// var_dump($_POST);
 
 if (
     !isset($_POST['title']) || $_POST['title'] == '' ||
@@ -41,6 +41,6 @@ if ($status == false) {
     exit();
 } else {
     // 正常にSQLが実行された場合は一覧ページファイルに移動し，一覧ページの処理を実行する
-    header("Location:index.php");
+    header("Location:read.php");
     exit();
 }

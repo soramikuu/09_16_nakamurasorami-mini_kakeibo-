@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('functions.php');
+check_session_id();
+// var_dump($_SESSION["user_id"]);
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -15,7 +23,7 @@
   <div class="container">
     <header class="my-5">
       <nav>
-        <a href="index.php" style="text-decoration: none; color:black;">かけいぼ</a>
+        <a href="read.php" style="text-decoration: none; color:black;" onmouseover="this.style.fontWeight='bolder'" onmouseout="this.style.fontWeight='lighter'">かけいぼ</a>
       </nav>
     </header>
 

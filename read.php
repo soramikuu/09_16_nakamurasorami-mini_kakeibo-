@@ -95,7 +95,7 @@ $t_spending = array_sum(array_column($result3, 'amount'));
                 <th scope="col" class="col-3 sort" data-sort="date" style="cursor: pointer;" onmouseover="this.style.background='#FAF0E6'" onmouseout="this.style.background='#FFFFF0'">日付</th>
                 <th scope="col" class="col-3">項目</th>
                 <th scope="col" class="col-2">収入</th>
-                <th scope="col" class="col-2">支出</th>
+                <th scope="col" class="col-2 sort" data-sort="spending" style="cursor: pointer;" onmouseover="this.style.background='#FAF0E6'" onmouseout="this.style.background='#FFFFF0'">支出</th>
                 <th scope="col" class="col-2">操作</th>
               </tr>
             </thead>
@@ -109,7 +109,7 @@ $t_spending = array_sum(array_column($result3, 'amount'));
                   <td class='col-3'><?= $record["title"] ?></td>
                   <!-- 三項演算子 typeが0か1かで表示場所変える-->
                   <td class='col-2'><?= $record['type'] == 0 ? $record["amount"] : '' ?></td>
-                  <td class='col-2'><?= $record['type'] == 1 ? $record["amount"] : '' ?></td>
+                  <td class='col-2 spending'><?= $record['type'] == 1 ? $record["amount"] : '' ?></td>
                   <!-- /三項演算子 -->
                   <td class='col-1'><a href='editForm.php?id=<?= $record["id"] ?>' style='text-decoration: none; color: black; font-weight: 200;' onmouseover="this.style.fontWeight='500'" onmouseout="this.style.fontWeight='200'">edit</a></td>
                   <td class='col-1'><a href='delete.php?id=<?= $record["id"] ?>' style='text-decoration: none; color: black; font-weight: 200;' onmouseover="this.style.fontWeight='500'" onmouseout="this.style.fontWeight='200'">del</a></td>
@@ -145,7 +145,7 @@ $t_spending = array_sum(array_column($result3, 'amount'));
   <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
   <script>
     var options = {
-      valueNames: ['date']
+      valueNames: ['date', 'spending']
     };
     var kakeiboList = new List('kakeibo', options);
   </script>

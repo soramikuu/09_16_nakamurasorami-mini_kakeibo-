@@ -73,7 +73,7 @@ if ($status == false) {
                 </tr>
 
               <?php endforeach ?>
-              <a class="nav-link" href="./createForm.php" style="text-decoration: none;color:black;" onmouseover="this.style.fontWeight='bolder'" onmouseout="this.style.fontWeight='lighter'">追加</a>
+              <a class="nav-link" href="./createForm.php"><span style="text-decoration: none;color:black; font-weight: 200; font-size: 20px;" onmouseover="this.style.fontWeight='500'" onmouseout="this.style.fontWeight='lighter'">add</span></a>
             </tbody>
           </table>
         </div>

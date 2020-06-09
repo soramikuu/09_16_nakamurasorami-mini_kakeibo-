@@ -38,11 +38,11 @@ if ($status == false) {
   <div class="container">
     <header class="my-5">
       <nav>
-        <a href="index.php" style="text-decoration: none;color:black;">かけいぼ</a>
+        <a href="index.php" style="text-decoration: none;color:black; " onmouseover="this.style.fontWeight='bolder'" onmouseout="this.style.fontWeight='lighter'">かけいぼ</a>
       </nav>
     </header>
 
-    <div class="row">
+    <div class=" row">
       <div class="col-12">
 
         <div class="table-responsive">
@@ -68,12 +68,12 @@ if ($status == false) {
                   <td class='col-2'><?= $record['type'] == 0 ? $record["amount"] : '' ?></td>
                   <td class='col-2'><?= $record['type'] == 1 ? $record["amount"] : '' ?></td>
                   <!-- /三項演算子 -->
-                  <td class='col-1'><a href='editForm.php?id=<?= $record["id"] ?>' style='text-decoration: none; color: black;'>edit</a></td>
-                  <td class='col-1'><a href='delete.php?id=<?= $record["id"] ?>' style='text-decoration: none; color: black;'>del</a></td>
+                  <td class='col-1'><a href='editForm.php?id=<?= $record["id"] ?>' style='text-decoration: none; color: black; font-weight: 200;' onmouseover="this.style.fontWeight='500'" onmouseout="this.style.fontWeight='200'">edit</a></td>
+                  <td class='col-1'><a href='delete.php?id=<?= $record["id"] ?>' style='text-decoration: none; color: black; font-weight: 200;' onmouseover="this.style.fontWeight='500'" onmouseout="this.style.fontWeight='200'">del</a></td>
                 </tr>
 
               <?php endforeach ?>
-              <a class="nav-link" href="./createForm.php" style="text-decoration: none;color:black;">追加</a>
+              <a class="nav-link" href="./createForm.php" style="text-decoration: none;color:black;" onmouseover="this.style.fontWeight='bolder'" onmouseout="this.style.fontWeight='lighter'">追加</a>
             </tbody>
           </table>
         </div>
